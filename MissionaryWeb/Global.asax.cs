@@ -5,6 +5,10 @@ using System.Web;
 using System.Web.Mvc;
 using System.Web.Optimization;
 using System.Web.Routing;
+using MissionaryWeb.Models;
+using MissionaryWeb.DAL;
+using System.Data.Entity;
+
 
 namespace MissionaryWeb
 {
@@ -12,6 +16,7 @@ namespace MissionaryWeb
     {
         protected void Application_Start()
         {
+            Database.SetInitializer<NewMissionSiteContext>(null);
             AreaRegistration.RegisterAllAreas();
             FilterConfig.RegisterGlobalFilters(GlobalFilters.Filters);
             RouteConfig.RegisterRoutes(RouteTable.Routes);

@@ -29,5 +29,7 @@ namespace MissionaryWeb.Models
         {
             return new ApplicationDbContext();
         }
+
+        public System.Data.Entity.DbSet<MissionaryWeb.Models.Missions> Missions { get; set; }
     }
 }
