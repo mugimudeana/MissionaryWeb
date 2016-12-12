@@ -1,4 +1,4 @@
-﻿
+﻿@model MissionaryWeb.Models.Missions
 
 @{
     ViewBag.Title = "Index";
@@ -20,6 +20,12 @@
                 }
 
             </ul>
+
+            <select>
+                <option value="saab">@Model.missionName</option>
+                <option value="opel">@Model.missionName</option>
+                <option value="audi">@Model.missionName</option>
+            </select>
         </div>
 
     </div>

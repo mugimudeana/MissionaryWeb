@@ -25,14 +25,53 @@ namespace MissionaryWeb.Controllers
             return View();
         }
         
-        public ActionResult MissionFAQ()
+       
+        // GET: Missions/Details/5
+        [Authorize]
+        public ActionResult MissionFAQ([Bind(Include = "missionID,missionName,presidentName,address,language,climate,domReligion,flag")]int? id)
         {
+            var listof = db.Mission.ToList();// I'm using the listof var to hold all the missions
+            ViewBag.ListMissions = listof;//storing the mission list to a viewbag since it can store "everything"
+
+            Missions mymission = db.Mission.Find(id);
+
+            if (id == 1)
+            {
+                ViewBag.Name = mymission.missionName; 
+                ViewBag.President = mymission.presidentName;
+                ViewBag.Address = mymission.address;
+                ViewBag.Language = mymission.language;
+                ViewBag.Climate = mymission.climate;
+                ViewBag.DominateReg = mymission.domReligion;
+                ViewBag.Flag = mymission.flag;
+            }
+
+            if (id == 2)
+            {
+                ViewBag.Name = mymission.missionName; 
+                ViewBag.President = mymission.presidentName;
+                ViewBag.Address = mymission.address;
+                ViewBag.Language = mymission.language;
+                ViewBag.Climate = mymission.climate;
+                ViewBag.DominateReg = mymission.domReligion;
+                ViewBag.Flag = mymission.flag;
+
+            }
+            if (id == 3)
+            {
+                ViewBag.Name = mymission.missionName; 
+                ViewBag.President = mymission.presidentName;
+                ViewBag.Address = mymission.address;
+                ViewBag.Language = mymission.language;
+                ViewBag.Climate = mymission.climate;
+                ViewBag.DominateReg = mymission.domReligion;
+                ViewBag.Flag = mymission.flag;
+            }
+
             return View();
         }
 
-        // GET: Missions/Details/5
-        [Authorize]
-        public ActionResult MissionFAQ(int? id)
+        public ActionResult Mission(int? id)
         {
             Missions currentMission = db.Mission.Find(id);//the parameter received will be the id used to search in the mission table
 

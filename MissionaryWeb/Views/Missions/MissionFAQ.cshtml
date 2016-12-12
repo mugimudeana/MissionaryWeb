@@ -14,10 +14,38 @@
                 <li>
                     <a href="@Url.Action("Index", "Mission")">Missions</a>
                 </li>
-                <li class="active">@Model.missionName Mission</li>
+             
             </ol>
         </div>
     </div>
+    <br />
+    <br />
+
+    <div class="row text-center">
+        <div class=" col-md-offset-2 col-md-4 formap">
+            <img class="map" src="@Model.flag" />
+        </div>
+        <div class="col-md-4">
+            <img class="flag" src="@Model.flag" />
+        </div>
+    </div>
+    <div class="row">
+        <br />
+        <p>
+            <strong><u>President</u>:</strong> @Model.presidentName
+            <br />
+            <br />
+            <strong><u>Address</u>:</strong> @Model.address
+            <br />
+            <br />
+            <strong> <u>Language</u>:</strong> @Model.language
+            <br />
+            <br />
+            <strong><u>Climate</u>:</strong> @Model.climate
+            <br />
+            <br />
+            <strong><u>Religion</u>:</strong> @Model.domReligion
+        </p>
 
 
-</div>
+    </div>
