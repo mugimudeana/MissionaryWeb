@@ -394,6 +394,7 @@ namespace MissionaryWeb.Controllers
         {
             FormsAuthentication.SignOut();
             Session.Abandon();
+            Session.Clear(); 
             AuthenticationManager.SignOut(DefaultAuthenticationTypes.ApplicationCookie);
             return RedirectToAction("Index", "Home");
         }

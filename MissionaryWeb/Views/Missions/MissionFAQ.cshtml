@@ -5,16 +5,16 @@
 <div class="container">
 
     <div class="row">
-       
+
         <div class="col-md-12">
             <ol class="breadcrumb">
                 <li>
                     <a href="@Url.Action("Index", "Home")">Home</a>
                 </li>
                 <li>
-                    <a href="@Url.Action("Index", "Mission")">Missions</a>
+                    <a href="@Url.Action("Index", "Missions")">Missions</a>
                 </li>
-             
+
             </ol>
         </div>
     </div>
@@ -49,3 +49,65 @@
 
 
     </div>
+
+    <div class="row">
+        <h2>FAQ</h2>
+        <br />
+        <div class="panel-group" id="accordion">
+            @foreach (var item in ViewBag.currentQuestions)
+            {
+                <div class="panel panel-default">
+                    <div class="panel-heading">
+                        <h4 class="panel-title">
+                            <a data-toggle="collapse" data-parent="#accordion" href="#collapse3">
+                                @item.question
+                            </a>
+                        </h4>
+                    </div>
+                    <div id="#collapse3" class="panel-collapse collapse in">
+                        <div class="panel-body">
+                            <!--Beggining comment-->
+                            <div class="comments">
+                                <!--the comment will be displayed here-->
+                                <div class="comment-wrap">
+                                    <div class="photo">
+                                        <div class="avatar" style="background-image: url('https://s3.amazonaws.com/uifaces/faces/twitter/jsa/128.jpg')"></div>
+                                    </div>
+                                    <div class="comment-block">
+                                        <p class="comment-text">
+                                            @item.answer
+                                        </p>
+                                        <div class="bottom-comment">
+                                            <div class="comment-date">Aug 24, 2014  2:35 PM</div>
+                                            <ul class="comment-actions">
+                                                <li class="reply" id="reply"><a href="/Missions/Edit/@item.missionquestionID">Reply</a></li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+
+
+
+
+
+                            </div>
+                            <!--Ending comment-->
+
+                        </div>
+                    </div>
+                </div>
+            }
+        </div>
+
+    </div>
+
+    <br />
+    <hr />
+    <div class="row">
+       <a href="/Missions/CreateQuestion">
+        <button class="btn-primary"> Submit a Question</button>
+        </a>
+    </div>
+
+
+</div>

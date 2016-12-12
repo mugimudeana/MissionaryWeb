@@ -253,7 +253,7 @@
     <Content Include="Views\Missions\Edit.cshtml" />
     <Content Include="Views\Missions\Index.cshtml" />
     <Content Include="Views\Missions\MissionFAQ.cshtml" />
-    <Content Include="Views\Missions\currentMission.cshtml" />
+    <Content Include="Views\Missions\CreateQuestion.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
