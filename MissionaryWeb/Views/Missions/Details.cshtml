@@ -1,0 +1,74 @@
+﻿@model MissionaryWeb.Models.Missions
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Missions</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.missionName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.missionName)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.presidentName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.presidentName)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.address)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.address)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.language)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.language)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.climate)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.climate)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.domReligion)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.domReligion)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.flag)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.flag)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.missionid }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

@@ -31,5 +31,7 @@ namespace MissionaryWeb.Models
         }
 
         public System.Data.Entity.DbSet<MissionaryWeb.Models.Missions> Missions { get; set; }
+
+        public System.Data.Entity.DbSet<MissionaryWeb.Models.MissionQuestions> MissionQuestions { get; set; }
     }
 }

@@ -161,6 +161,7 @@
     <Compile Include="Controllers\AccountController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\ManageController.cs" />
+    <Compile Include="Controllers\MissionsController.cs" />
     <Compile Include="DAL\NewMissionSiteContext.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
@@ -177,6 +178,19 @@
   <ItemGroup>
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
+    <Content Include="Content\Images\about-us.png" />
+    <Content Include="Content\Images\contactUs.jpg" />
+    <Content Include="Content\Images\decision.jpg" />
+    <Content Include="Content\Images\flag-of-italy.png" />
+    <Content Include="Content\Images\floridaFlag.png" />
+    <Content Include="Content\Images\globe.jpg" />
+    <Content Include="Content\Images\missionary.jpg" />
+    <Content Include="Content\Images\mormon-temple.jpg" />
+    <Content Include="Content\Images\nouser.png" />
+    <Content Include="Content\Images\Salt Lake Temple Christmas.jpg" />
+    <Content Include="Content\Images\SanPaulo.gif" />
+    <Content Include="Content\Images\tags.png" />
+    <Content Include="Content\Images\toDolist.jpg" />
     <Content Include="favicon.ico" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
@@ -233,6 +247,13 @@
     <Content Include="Views\Home\Login.cshtml" />
     <Content Include="Views\Home\Register.cshtml" />
     <Content Include="Views\Home\SelectMission.cshtml" />
+    <Content Include="Views\Missions\Create.cshtml" />
+    <Content Include="Views\Missions\Delete.cshtml" />
+    <Content Include="Views\Missions\Details.cshtml" />
+    <Content Include="Views\Missions\Edit.cshtml" />
+    <Content Include="Views\Missions\Index.cshtml" />
+    <Content Include="Views\Missions\MissionFAQ.cshtml" />
+    <Content Include="Views\Missions\currentMission.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

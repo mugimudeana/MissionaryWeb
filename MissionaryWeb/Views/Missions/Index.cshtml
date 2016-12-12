@@ -1,0 +1,28 @@
+﻿
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<div class="container">
+
+    <div class="text-center">
+        <div class="btn-group">
+            <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                Choose a mission <span class="caret"></span>
+            </button>
+            <ul class="dropdown-menu">
+                @foreach (var item in @ViewBag.ListMissions)
+                {
+                    <li><a href="/Missions/MissionFAQ/@item.missionID">@item.missionName<br /> Mission</a></li>
+                }
+
+            </ul>
+        </div>
+
+    </div>
+
+
+</div>

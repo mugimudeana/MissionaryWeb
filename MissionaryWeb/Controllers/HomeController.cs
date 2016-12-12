@@ -49,10 +49,10 @@ namespace MissionaryWeb.Controllers
                 var usr = db.User.Where(u => u.userEmail == account.userEmail && u.password == account.password).FirstOrDefault();
                 if (usr != null)
                 {
-                    Session["UserID"] = usr.userid.ToString();
+                    Session["UserID"] = usr.userID.ToString();
                     Session["username"] = usr.userEmail.ToString();
                     FormsAuthentication.SetAuthCookie(usr.userEmail, rememberMe);
-                    return RedirectToAction("SelectMission", "Home", new { id = Session["mission"], userid = Session["UserID"] });
+                    return RedirectToAction("Index", "Missions", new { id = Session["mission"], userid = Session["UserID"] });
                     // return RedirectToAction("Index", "MissionQuestions", new { id = Session["mission"] });
 
                 }
@@ -85,11 +85,11 @@ namespace MissionaryWeb.Controllers
                 db.SaveChanges();
 
                 ModelState.Clear();
-                Session["UserID"] = account.userid;
+                Session["UserID"] = account.userID;
                 Session["username"] = account.userEmail;
                 FormsAuthentication.SetAuthCookie(account.userEmail.ToString(), rememberMe);
 
-                return RedirectToAction("SelectMission");
+                return RedirectToAction("Index", "Missions");
 
             }
             return View();

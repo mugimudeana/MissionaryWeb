@@ -31,5 +31,7 @@ namespace MissionaryWeb.Models
         [DisplayName("Answer")]
         public string answer { get; set; }
 
+
+        public object missionName { get; set; }
     }
 }

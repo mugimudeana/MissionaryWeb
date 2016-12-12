@@ -13,7 +13,7 @@ namespace MissionaryWeb.Models
     {
         [Key]
         [DisplayName("UserID")]
-        public int userid { get; set; }
+        public int userID { get; set; }
 
 
         [DisplayName("Email")]

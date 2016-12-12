@@ -15,7 +15,7 @@ namespace MissionaryWeb.Models
     {
         [Key]
         [DisplayName("MissionID")]
-        public int missionid { get; set; }
+        public int missionID { get; set; }
 
 
         [DisplayName("Mission Name")]
